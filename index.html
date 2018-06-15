@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Simple Live Editor</title>
+  <meta name="description" content="A simple live editor with very few lines of code.">
+  <link rel="stylesheet" href="prism.css">
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+  <!-- Preview of the code -->
+  <iframe id="preview"></iframe>
+
+  <!-- Editor Boxes -->
+  <div class="editor">
+
+    <textarea id="html" class="language-html">
+<h1>Hello World!</h1>
+    </textarea>
+
+    <textarea id="css" class="language-css">
+body {
+  align-items: center;
+  background: #116fff;
+  display: flex;
+  justify-content: center;
+}
+
+h1 {
+  color: white;
+  font-size: 75px;
+  font-family: sans-serif;
+}
+
+span {
+  color: red;
+  font-size: 80px;
+}
+    </textarea>
+
+    <textarea id="js" class="language-js">
+var hello = document.querySelector('h1');
+hello.innerHTML += ' With JS! <span>❤</span>';
+    </textarea>
+  </div>
+
+  <script src="prism.js"></script>
+  <script src="prism-highlight.js"></script>
+  <script src="app.js"></script>
+</body>
+
+</html>
